@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("----- ATYAB EL THAMAR STARTUP (v_SatelliteAndDetails_Dates_Visual) ----- DOM loaded."); // Added _Visual
 
     // --- SUPABASE CLIENT SETUP ---
-    const SUPABASE_URL = 'YOUR_SUPABASE_URL_HERE'; // ✅ !! REPLACE THIS !!
-    const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE'; // ✅ !! REPLACE THIS !!
+    const SUPABASE_URL = 'https://lhodhrpfbetqrjfbdxzm.supabase.co'; // ✅ !! REPLACE THIS !!
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxob2RocnBmYmV0cXJqZmJkeHptIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxNDY1MzAsImV4cCI6MjA2MjcyMjUzMH0.2XLcTLZU0rBo8sy7fPKzSX-25dBLD6m2zlZK2Gi2IDc'; // ✅ !! REPLACE THIS !!
 
     if (!SUPABASE_URL || !SUPABASE_ANON_KEY || SUPABASE_URL.includes("YOUR_SUPABASE_URL") || SUPABASE_ANON_KEY.includes("YOUR_SUPABASE_ANON_KEY")) {
         console.error("🛑 توقف! مفاتيح Supabase مفقودة أو افتراضية في script.js. يجب إصلاحها!");
