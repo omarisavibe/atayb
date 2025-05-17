@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أطايب الواحات - تمور فاخرة لكل مناسبة</title>
+    <title>أطيب الثمر - تمور واحات فاخرة</title> {/* BRANDING: Atyab El Thamar */}
     <link rel="icon" href="atyab-logo-gold.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,59 +15,64 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
-    <meta name="description" content="اكتشف أفخر أنواع تمور الواحات الطبيعية من أطايب الواحات. جودة لا مثيل لها، توصيل سريع في القاهرة والجيزة.">
-    <!-- Inline styles from original file should be moved to style.css if they are general -->
-    <!-- I've incorporated them into the style.css above for better organization -->
+    <meta name="description" content="اكتشف أفخر أنواع تمور الواحات الطبيعية من أطيب الثمر. جودة لا مثيل لها، توصيل سريع في القاهرة والجيزة.">
+    <!-- Inline styles removed - all consolidated in style.css -->
 </head>
 <body class="dark-theme">
 
     <header class="site-header">
         <div class="container header-container">
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle-btn" aria-label="فتح/إغلاق القائمة" aria-expanded="false" aria-controls="main-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <div class="logo-area">
-                <img src="atyab-logo-gold.png" alt="شعار أطايب الواحات" class="logo-main">
+                <img src="atyab-logo-gold.png" alt="شعار أطيب الثمر" class="logo-main"> {/* BRANDING */}
             </div>
-            <nav class="main-nav" id="main-nav" aria-label="القائمة الرئيسية"> {/* Added id for JS */}
+            <nav class="main-nav" id="main-nav" aria-label="القائمة الرئيسية">
                 <a href="#how-to-order" class="nav-link">كيفية الطلب</a>
                 <a href="#about-us" class="nav-link">عن تمورنا</a>
+                {/* <a href="#contact" class="nav-link">اتصل بنا</a> You can add more links */}
             </nav>
             <button id="cart-button" class="cart-toggle-button button-style-primary">
-                🛒 سلتك (<span id="cart-count">0</span>)
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 5px; vertical-align: middle;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                سلتك (<span id="cart-count">0</span>)
             </button>
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle-btn" aria-label="فتح/إغلاق القائمة" aria-expanded="false" aria-controls="main-nav">☰</button> {/* Added ID for JS */}
         </div>
     </header>
 
     <main>
         <!-- Screen 1: Choose Date Size -->
         <section id="date-size-selection-screen" class="selection-screen active-screen" style="background-image: url('gold-ripple-background.jpg'); background-size: cover; background-position: center;">
-            <h1 class="selection-title">أطايب الواحات</h1>
-            <p class="selection-subtitle">رحلة الطعم تبدأ بحجمك المفضل. اختر من كنوز الواحات الأصيلة.</p>
+            <h1 class="selection-title">أطيب الثمر</h1> {/* BRANDING */}
+            <p class="selection-subtitle">جودة تليق بك، اختر حجم تمر الواحات المفضل لتبدأ رحلة المذاق الأصيل.</p>
             <div class="size-selection-visual-options">
                 <div class="size-option-card" data-size="صغير">
-                    <img src="wahat_dates_small_visual.png" alt="تمور الواحات بحجم صغير">
+                    <img src="wahat_dates_small_visual.png" alt="تمور واحات بحجم صغير">
                     <h3>صغير</h3>
                     <p class="size-description">نكهة مركزة، مثالية للتلذذ اليومي.</p>
                 </div>
                 <div class="size-option-card" data-size="وسط">
-                    <img src="wahat_dates_medium_visual.png" alt="تمور الواحات بحجم متوسط">
+                    <img src="wahat_dates_medium_visual.png" alt="تمور واحات بحجم متوسط">
                     <h3>وسط</h3>
                     <p class="size-description">قوام متوازن، لطعم غني يرضي جميع الأذواق.</p>
                 </div>
                 <div class="size-option-card" data-size="چامبو">
-                    <img src="wahat_dates_jumbo_visual.png" alt="تمور الواحات بحجم چامبو">
+                    <img src="wahat_dates_jumbo_visual.png" alt="تمور واحات بحجم چامبو">
                     <h3>چامبو</h3>
-                    <p class="size-description">تجربة ملكية فاخرة، للحظات استثنائية.</p>
+                    <p class="size-description">تجربة ملكية فاخرة، للحظات لا تُنسى.</p>
                 </div>
             </div>
             <div class="info-text-container">
-                <p class="info-text">تمور الواحات طبيعية ١٠٠٪ وعضوية، مختارة بحب وعناية من قلب الطبيعة المصرية الخصبة، نقدمها لك لتستمتع بكل حبة.</p>
+                <p class="info-text">تمور الواحات من أطيب الثمر، طبيعية ١٠٠٪ وعضوية، مختارة بحب وعناية فائقة من قلب الطبيعة المصرية الخصبة. نقدمها لك لتستمتع بكل حبة.</p> {/* BRANDING */}
             </div>
         </section>
 
         <!-- Screen 2: Choose Pack Weight -->
         <section id="pack-weight-selection-screen" class="selection-screen" style="display: none;">
             <h2 class="selection-title">اختر وزن العبوة</h2>
-            <p class="selection-subtitle">تمور الواحات <span id="selected-date-size-display"></span> المختارة: جوهر الفخامة بين يديك.</p>
+            <p class="selection-subtitle">تمور الواحات <span id="selected-date-size-display"></span> من أطيب الثمر: جوهر الفخامة بين يديك.</p> {/* BRANDING */}
             <div class="selection-options">
                 <button class="option-button" data-weight="400">عبوة ٤٠٠ جم</button>
                 <button class="option-button" data-weight="800">عبوة ٨٠٠ جم</button>
@@ -78,40 +83,38 @@
         <!-- Screen 3: Product Display & Add to Cart -->
         <section id="product-display-screen" class="product-display-area" style="display: none;">
             <h2 class="selection-title">تشكيلتك المختارة من تمور الواحات</h2>
-            <p class="selection-subtitle" id="final-product-selection-info">الآن، أضف هذه الكنوز الذهبية إلى سلتك واستمتع بالمذاق الأصيل.</p>
+            <p class="selection-subtitle" id="final-product-selection-info">الآن، أضف هذه الكنوز الذهبية من أطيب الثمر إلى سلتك واستمتع بالمذاق الأصيل.</p> {/* BRANDING */}
             <div id="product-grid" class="product-grid">
-                 <p class="loading-msg" id="loading-indicator" style="display: none;">لحظات من فضلك، نجلب لك أشهى أطايب الواحات...</p>
+                 <p class="loading-msg" id="loading-indicator" style="display: none;">لحظات من فضلك، نجلب لك أشهى تمور الواحات من أطيب الثمر...</p> {/* BRANDING */}
             </div>
              <button id="back-to-weight-selection" class="cta-button button-style-secondary" style="margin-top: 2rem;">العودة لاختيار الوزن</button>
         </section>
 
-
         <section id="how-to-order" class="info-section container">
-            <h2 class="section-title">خطوات بسيطة لطلب كنوز الواحات</h2>
+            <h2 class="section-title">خطواتك لطلب تمور الواحات من أطيب الثمر</h2> {/* BRANDING */}
             <ol class="steps-list">
-                <li>انتقِ حجم التمر الذي يلامس ذوقك الرفيع من بين (صغير، وسط، أو چامبو).</li>
+                <li>انتقِ حجم تمر الواحات الذي يلامس ذوقك الرفيع (صغير، وسط، أو چامبو).</li>
                 <li>حدد وزن العبوة الذي يلائم احتياجك ويضاعف متعتك (٤٠٠ جم أو ٨٠٠ جم).</li>
-                <li>استعرض بعناية أصناف تمور الواحات الفاخرة وأضفها لسلتك بكل يسر.</li>
-                <li>أكمل بيانات التوصيل بدقة، حدد موقعك بوضوح على الخريطة التفاعلية، واختر طريقة الدفع التي تناسبك.</li>
-                <li>استرخِ وانتظر وصول أطايب الواحات الطازجة، معبأة بالحب، إلى عتبة دارك!</li>
+                <li>استعرض بعناية أصناف تمور الواحات الفاخرة من أطيب الثمر وأضفها لسلتك.</li> {/* BRANDING */}
+                <li>أكمل بيانات التوصيل بدقة، حدد موقعك بوضوح على الخريطة، واختر طريقة الدفع.</li>
+                <li>استرخِ وانتظر وصول تمور أطيب الثمر الطازجة، معبأة بالحب، إلى باب بيتك!</li> {/* BRANDING */}
             </ol>
         </section>
 
         <section id="about-us" class="info-section dark-section">
             <div class="container">
-            <h2 class="section-title">حكاية أطايب الواحات</h2>
-            <p class="section-subtitle">في "أطايب الواحات"، نفخر بتقديم تمور طبيعية استثنائية، هي جوهر خيرات الواحات المصرية الأصيلة. كل تمرة ننتقيها هي شهادة على شغفنا بالجودة والتزامنا بأعلى معايير الزراعة العضوية. نضمن لك منتجًا نقيًا وطبيعيًا، يثري لحظاتك بمذاق لا يُنسى وفوائد صحية قيمة.</p>
-            <p>سواء كنت تبحث عن مصدر طبيعي للطاقة والحيوية، أو هدية فاخرة تعبر عن تقديرك، أو إضافة صحية ومترفة لمائدتك اليومية، فإن تمور "أطايب الواحات" هي خيارك الأمثل. نقدم لك تجربة فريدة تجمع بين أصالة التراث وجودة الحاضر، مع تعهدنا الدائم بتقديم الأفضل، من قلب واحاتنا الغنّاء إليك مباشرة.</p>
-            <img src="premium-dates-assortment.jpg" alt="تشكيلة فاخرة من تمور أطايب الواحات" class="info-image" style="max-width: 450px; margin: 1.5rem auto; border-radius: var(--radius-large); border: 3px solid var(--brand-gold-transparent);">
+            <h2 class="section-title">حكاية أطيب الثمر</h2> {/* BRANDING */}
+            <p class="section-subtitle">في "أطيب الثمر"، نفخر بتقديم تمور الواحات الطبيعية الاستثنائية، هي جوهر خيرات الواحات المصرية الأصيلة. كل تمرة ننتقيها هي شهادة على شغفنا بالجودة والتزامنا بأعلى معايير الزراعة العضوية. نضمن لك منتجًا نقيًا وطبيعيًا، يثري لحظاتك بمذاق لا يُنسى وفوائد صحية قيمة.</p> {/* BRANDING */}
+            <p>سواء كنت تبحث عن مصدر طبيعي للطاقة والحيوية، أو هدية فاخرة تعبر عن تقديرك، أو إضافة صحية ومترفة لمائدتك اليومية، فإن تمور الواحات من "أطيب الثمر" هي خيارك الأمثل. نقدم لك تجربة فريدة تجمع بين أصالة التراث وجودة الحاضر، مع تعهدنا الدائم بتقديم الأفضل، من قلب واحاتنا الغنّاء إليك مباشرة.</p> {/* BRANDING */}
+            <img src="premium-dates-assortment.jpg" alt="تشكيلة فاخرة من تمور الواحات مقدمة من أطيب الثمر" class="info-image" style="max-width: 450px; margin: 1.5rem auto; border-radius: var(--radius-large); border: 3px solid var(--brand-gold-transparent);">
             </div>
         </section>
-
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p class="copyright">© <span id="year">2024</span> أطايب الواحات. جميع الحقوق محفوظة.</p>
-            <p class="footer-tagline">تمور طبيعية فاخرة، من قلب الواحة إليك بكل حب.</p>
+            <p class="copyright">© <span id="year">2024</span> أطيب الثمر. جميع الحقوق محفوظة.</p> {/* BRANDING */}
+            <p class="footer-tagline">تمور واحات طبيعية فاخرة، من أطيب الثمر إليك بكل حب.</p> {/* BRANDING */}
              <a href="admin-login.html" class="admin-secret-link" target="_blank" title="Admin Zone">👨‍💻</a>
         </div>
     </footer>
@@ -119,12 +122,14 @@
     <!-- Cart Sidebar & Overlay -->
     <div id="cart-overlay" class="cart-overlay"></div>
     <div id="cart-sidebar" class="cart-sidebar">
-        <button id="close-cart-button" class="close-modal-button" aria-label="إغلاق السلة">×</button>
-        <h2 class="sidebar-title">سلة أطايبك الذهبية</h2>
-        <div id="cart-items" class="cart-items-container">
-            <p class="cart-empty-message">سلتك بانتظار أطايب الواحات. ابدأ رحلة الاختيار الآن!</p>
+        <div class="cart-header">
+            <h2 class="sidebar-title">سلتك من أطيب الثمر</h2> {/* BRANDING */}
+            <button id="close-cart-button" class="close-modal-button" aria-label="إغلاق السلة">✕</button>
         </div>
-        <div class="cart-summary-section">
+        <div id="cart-items" class="cart-items-container">
+            <p class="cart-empty-message">سلتك بانتظار تمور الواحات الشهية من أطيب الثمر. ابدأ الاختيار!</p> {/* BRANDING */}
+        </div>
+        <div class="cart-footer-summary"> {/* Changed class name to cart-footer-summary for clarity */}
             <p class="cart-total-text">الإجمالي: <span id="cart-total-price">٠٫٠٠ ج.م</span></p>
             <button id="checkout-button" class="cta-button checkout-btn" disabled>إتمام الطلب والدفع الآمن</button>
         </div>
@@ -133,99 +138,103 @@
     <!-- Checkout Modal & Overlay -->
     <div id="checkout-overlay" class="checkout-overlay">
         <div id="checkout-modal" class="checkout-modal">
-            <button id="close-checkout-button" class="close-modal-button" aria-label="إغلاق نافذة الطلب">×</button>
-            <h2 class="modal-title">تفاصيل التوصيل والدفع النهائية</h2>
-            <form id="checkout-form" novalidate>
-                <div class="form-group">
-                    <label for="customer_name">الاسم الكريم بالكامل:</label>
-                    <input type="text" id="customer_name" name="customer_name" placeholder="مثال: محمد أحمد علي" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="customer_phone">رقم الهاتف (ضروري للتواصل):</label>
-                    <input type="tel" id="customer_phone" name="customer_phone" placeholder="٠١XXXXXXXXX (أرقام إنجليزية)" required pattern="^01[0-2,5]{1}[0-9]{8}$">
-                    <small class="form-hint">سيتم استخدامه لتأكيد الطلب وتنسيق عملية التوصيل بكفاءة.</small>
-                </div>
-
-                <div class="form-group">
-                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 10px;">
-                        <label for="map-container" style="margin-bottom: 0;">موقع التوصيل (يرجى التحديد بدقة على الخريطة أو البحث):</label>
-                        <button type="button" id="find-me-button" class="button-style-secondary small-button" title="تحديد موقعي الحالي">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="vertical-align: middle; margin-left: 4px;"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
-                             حدد موقعي الآن
-                        </button>
+            <div class="checkout-modal-header">
+                 <h2 class="modal-title">تفاصيل التوصيل والدفع النهائية</h2>
+                <button id="close-checkout-button" class="close-modal-button" aria-label="إغلاق نافذة الطلب">✕</button>
+            </div>
+            <div class="checkout-modal-content">
+                <form id="checkout-form" novalidate>
+                    <div class="form-group">
+                        <label for="customer_name">الاسم الكريم بالكامل:</label>
+                        <input type="text" id="customer_name" name="customer_name" placeholder="مثال: محمد أحمد علي" required>
                     </div>
-                    <p style="font-size: 0.85em; margin-bottom: 0.5rem; color: var(--text-grey-light);">
-                        نصيحة هامة: استخدم عرض "القمر الصناعي" (أعلى يمين الخريطة) لرؤية واضحة للمباني والشوارع! انقر مباشرة على الخريطة، أو ابحث عن عنوانك، أو استخدم زر 'حدد موقعي الآن' لتسهيل العملية.
-                        <strong style="color: var(--brand-gold-light); display: block; margin-top: 4px; background-color: rgba(0,0,0,0.3); padding: 5px; border-radius: var(--radius-small);">📍 خدمة التوصيل الفاخرة متاحة حاليًا في مناطق <strong style="text-decoration: underline;">القاهرة الكبرى</strong> و<strong style="text-decoration: underline;">محافظة الجيزة</strong>.</strong>
-                    </p>
-                    <div id="map-container" class="map-container" style="height: 300px; width: 100%; margin-bottom: 1rem; border: 2px solid var(--brand-gold-transparent); border-radius: var(--radius-medium); background-color: #222; position: relative; overflow: hidden;">
-                        <p style="text-align:center; padding-top: 40%; color: var(--text-grey-medium); position: absolute; top: 0; right: 0; width: 100%; z-index: 0; font-size: 1.1rem;">لحظات من فضلك، يتم تحميل الخريطة التفاعلية...</p>
+
+                    <div class="form-group">
+                        <label for="customer_phone">رقم الهاتف (ضروري للتواصل):</label>
+                        <input type="tel" id="customer_phone" name="customer_phone" placeholder="٠١XXXXXXXXX (أرقام إنجليزية)" required pattern="^01[0-2,5]{1}[0-9]{8}$">
+                        <small class="form-hint">سيتم استخدامه لتأكيد طلبك من أطيب الثمر وتنسيق التوصيل.</small> {/* BRANDING */}
                     </div>
-                    <p id="location-status" class="status-pending" style="text-align: center; font-weight: bold; min-height: 1.8em; margin-bottom: 1rem; padding: 5px; border-radius: var(--radius-small); background-color: rgba(0,0,0,0.2);">نرجو منكم التكرم بتحديد موقعكم بدقة على الخريطة أو البحث عن العنوان.</p>
-                    <input type="hidden" id="customer_latitude" name="customer_latitude" required>
-                    <input type="hidden" id="customer_longitude" name="customer_longitude" required>
-                </div>
 
-                <div class="form-group address-details-group">
-                    <h4 style="margin-bottom: 0.8rem; font-size: 1.05rem; color: var(--brand-gold-light);">تفاصيل إضافية لعنوان التوصيل (اختياري ولكن يساهم في سرعة ودقة وصول طلبك):</h4>
-                    <label for="building_details">اسم/رقم المبنى/الفيلا/البرج:</label>
-                    <input type="text" id="building_details" name="building_details" placeholder="مثال: فيلا رقم ١٢٣ ب، عمارة الأمل - برج النصر">
-                    <label for="floor_apt">رقم الدور والشقة (إن وجد):</label>
-                    <input type="text" id="floor_apt" name="floor_apt" placeholder="مثال: الدور الثالث، شقة رقم ٣٠٢ يمين الأسانسير">
-                    <label for="landmarks">أقرب علامات مميزة / ملاحظات هامة لمندوب التوصيل الذكي:</label>
-                    <input type="text" id="landmarks" name="landmarks" placeholder="مثال: بجوار مسجد النور مباشرة، أمام صيدلية العزبي، يرجى الاتصال قبل الوصول بـ ١٠ دقائق">
-                </div>
-
-                <div class="checkout-summary-box">
-                    <h4 class="summary-title" style="font-size: 1.15rem; margin-bottom: 0.6rem;">ملخص طلبكم الكريم من أطايب الواحات:</h4>
-                    <div id="checkout-summary" style="max-height: 90px; overflow-y: auto; padding: 5px; background-color: rgba(0,0,0,0.1); border-radius: var(--radius-small);">
-                        <p style="font-style: italic; color: var(--text-grey-light); font-size: 0.9rem;">محتويات السلة الفاخرة ستظهر هنا فور إضافتها...</p>
-                    </div>
-                    <p class="total-title" style="margin-top: 0.8rem; font-size: 1.25rem;">الإجمالي المستحق للدفع: <span id="checkout-total-price">٠٫٠٠ ج.م</span></p>
-                </div>
-                
-                 <div class="telda-payment-instructions">
-                    <img src="telda-logo-dark.png" alt="شعار تلدا" class="telda-logo">
-                    <h4>الدفع الآمن والمريح عبر Telda (اختياري)</h4>
-                    <p>يمكنكم بكل سهولة إرسال إجمالي المبلغ (<span id="telda-total-price-reminder" class="payment-total-reminder">٠٫٠٠ ج.م</span>) عبر تطبيق تلدا إلى الحساب الموضح:</p>
-                    <p class="telda-username-wrapper" style="text-align: center; margin-top: 5px;">
-                        <span class="telda-username">@AtyabElWahat</span> <!-- EXAMPLE USERNAME - UPDATE -->
-                    </p>
-                </div>
-
-                <div class="instapay-payment-instructions">
-                    <img src="instapay-logo-dark.png" alt="شعار إنستاباي" class="instapay-logo">
-                    <h4>الدفع الفوري والسريع عبر InstaPay (اختياري)</h4>
-                    <p>أو تفضلوا بإرسال إجمالي المبلغ (<span id="instapay-total-price-reminder" class="payment-total-reminder">٠٫٠٠ ج.م</span>) بمنتهى الأمان عبر تطبيق إنستاباي إلى البيانات التالية:</p>
-                    <div class="copyable-detail" style="margin-top: 5px;">
-                        <label>رقم الحساب/الهاتف المسجل:</label>
-                        <span class="instapay-detail" id="instapay-account">01000000000 / أطايب الواحات</span> <!-- UPDATE THIS -->
-                        <button type="button" class="copy-button" data-clipboard-target="#instapay-account" aria-label="نسخ رقم الحساب">📋 نسخ البيانات للتحويل</button>
-                    </div>
-                </div>
-
-                <div class="form-group payment-method-selection">
-                    <label>نرجو التكرم باختيار طريقة الدفع التي تناسبكم:*</label>
-                    <div class="payment-method-options">
-                        <div>
-                            <input type="radio" id="payment-method-telda" name="payment_method" value="Telda" required>
-                            <label for="payment-method-telda">Telda (تم الدفع أو سيتم الدفع)</label>
+                    <div class="form-group">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 10px;">
+                            <label for="map-container" style="margin-bottom: 0; flex-basis: 100%; @media (min-width: 500px){ flex-basis: auto;}">موقع التوصيل (حدد بدقة):</label>
+                            <button type="button" id="find-me-button" class="button-style-secondary small-button" title="تحديد موقعي الحالي">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="vertical-align: middle; margin-left: 4px;"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+                                حدد موقعي
+                            </button>
                         </div>
-                        <div>
-                            <input type="radio" id="payment-method-instapay" name="payment_method" value="Instapay" required>
-                            <label for="payment-method-instapay">InstaPay (تم الدفع أو سيتم الدفع)</label>
+                        <p style="font-size: 0.85em; margin-bottom: 0.8rem; color: var(--text-grey-light);">
+                            استخدم "القمر الصناعي" (أعلى يمين الخريطة) لرؤية المباني بوضوح! انقر على الخريطة، ابحث، أو 'حدد موقعي'.
+                            <strong style="color: var(--brand-gold-light); display: block; margin-top: 5px; background-color: rgba(0,0,0,0.3); padding: 6px; border-radius: var(--radius-small);">📍 التوصيل من أطيب الثمر متاح حاليًا في <strong style="text-decoration: underline;">القاهرة الكبرى والجيزة</strong>.</strong> {/* BRANDING */}
+                        </p>
+                        <div id="map-container" class="map-container" style="height: 280px; width: 100%; margin-bottom: 1rem; border: 2px solid var(--brand-gold-transparent); border-radius: var(--radius-medium); background-color: #222; position: relative; overflow: hidden;">
+                            <p style="text-align:center; padding-top: 35%; color: var(--text-grey-medium); position: absolute; top: 0; right: 0; width: 100%; z-index: 0; font-size: 1.1rem;">لحظات من فضلك، يتم تحميل الخريطة التفاعلية...</p>
                         </div>
-                        <div>
-                            <input type="radio" id="payment-method-cash" name="payment_method" value="CashOnDelivery" required>
-                            <label for="payment-method-cash">الدفع نقداً عند الاستلام (كاش)</label>
+                        <p id="location-status" class="status-pending" style="text-align: center; font-weight: bold; min-height: 1.8em; margin-bottom: 1.2rem; padding: 8px; border-radius: var(--radius-small); background-color: rgba(0,0,0,0.2);">نرجو التكرم بتحديد موقعكم بدقة.</p>
+                        <input type="hidden" id="customer_latitude" name="customer_latitude" required>
+                        <input type="hidden" id="customer_longitude" name="customer_longitude" required>
+                    </div>
+
+                    <div class="form-group address-details-group">
+                        <h4 style="margin-bottom: 0.8rem; font-size: 1.05rem; color: var(--brand-gold-light);">تفاصيل إضافية للعنوان (اختياري لكن مفيد):</h4>
+                        <label for="building_details">اسم/رقم المبنى/الفيلا:</label>
+                        <input type="text" id="building_details" name="building_details" placeholder="مثال: فيلا ١٢٣ ب، عمارة النصر">
+                        <label for="floor_apt">الدور والشقة (إن وجد):</label>
+                        <input type="text" id="floor_apt" name="floor_apt" placeholder="مثال: الدور 3، شقة ٣٠٢">
+                        <label for="landmarks">علامات مميزة / ملاحظات لمندوب أطيب الثمر:</label> {/* BRANDING */}
+                        <input type="text" id="landmarks" name="landmarks" placeholder="مثال: بجوار مسجد الرحمن، الاتصال عند الوصول">
+                    </div>
+
+                    <div class="checkout-summary-box">
+                        <h4 class="summary-title" style="font-size: 1.15rem; margin-bottom: 0.6rem;">ملخص طلبك من أطيب الثمر:</h4> {/* BRANDING */}
+                        <div id="checkout-summary" style="max-height: 90px; overflow-y: auto; padding: 8px; background-color: rgba(0,0,0,0.1); border-radius: var(--radius-small);">
+                            <p style="font-style: italic; color: var(--text-grey-light); font-size: 0.9rem;">محتويات السلة الفاخرة ستظهر هنا...</p>
+                        </div>
+                        <p class="total-title" style="margin-top: 0.8rem; font-size: 1.25rem;">الإجمالي للدفع: <span id="checkout-total-price">٠٫٠٠ ج.م</span></p>
+                    </div>
+                    
+                    <div class="telda-payment-instructions">
+                        <img src="telda-logo-dark.png" alt="شعار تلدا" class="telda-logo">
+                        <h4>الدفع عبر Telda (اختياري)</h4>
+                        <p>أرسل إجمالي المبلغ (<span id="telda-total-price-reminder" class="payment-total-reminder">٠٫٠٠ ج.م</span>) عبر تلدا إلى:</p>
+                        <p class="telda-username-wrapper" style="text-align: center; margin-top: 5px;">
+                            <span class="telda-username">@AtyabElThamar</span> {/* BRANDING: Example */}
+                        </p>
+                    </div>
+
+                    <div class="instapay-payment-instructions">
+                        <img src="instapay-logo-dark.png" alt="شعار إنستاباي" class="instapay-logo">
+                        <h4>الدفع عبر InstaPay (اختياري)</h4>
+                        <p>أو أرسل إجمالي المبلغ (<span id="instapay-total-price-reminder" class="payment-total-reminder">٠٫٠٠ ج.م</span>) عبر إنستاباي إلى:</p>
+                        <div class="copyable-detail" style="margin-top: 5px;">
+                            <label>رقم الحساب/الهاتف:</label>
+                            <span class="instapay-detail" id="instapay-account">01xxxxxxxxx / أطيب الثمر</span> {/* BRANDING: Example */}
+                            <button type="button" class="copy-button" data-clipboard-target="#instapay-account" aria-label="نسخ رقم الحساب">📋 نسخ البيانات</button>
                         </div>
                     </div>
-                </div>
 
-                <button type="submit" id="submit-order-button" class="cta-button submit-btn">تأكيد الطلب الآن وإرسال التفاصيل النهائية</button>
-                <p id="checkout-message" class="checkout-message"></p>
-            </form>
+                    <div class="form-group payment-method-selection">
+                        <label>اختر طريقة الدفع المفضلة:*</label>
+                        <div class="payment-method-options">
+                            <div>
+                                <input type="radio" id="payment-method-telda" name="payment_method" value="Telda" required>
+                                <label for="payment-method-telda">Telda (تم/سيتم الدفع)</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="payment-method-instapay" name="payment_method" value="Instapay" required>
+                                <label for="payment-method-instapay">InstaPay (تم/سيتم الدفع)</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="payment-method-cash" name="payment_method" value="CashOnDelivery" required>
+                                <label for="payment-method-cash">الدفع نقداً عند الاستلام</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-order-button" class="cta-button submit-btn">تأكيد الطلب وإرساله الآن</button>
+                    <p id="checkout-message" class="checkout-message"></p>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -234,27 +243,22 @@
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="script.js"></script>
     <script>
-        // Simple JS for mobile menu toggle
+        // Mobile Menu Toggle (Interactive)
         const menuToggleBtn = document.getElementById('mobile-menu-toggle-btn');
         const mainNav = document.getElementById('main-nav');
         if (menuToggleBtn && mainNav) {
             menuToggleBtn.addEventListener('click', () => {
                 const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true' || false;
                 menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+                menuToggleBtn.classList.toggle('active'); // For animating the hamburger icon
                 mainNav.classList.toggle('active');
-                document.body.classList.toggle('overlay-active'); // To prevent body scroll when menu is open
-                 // Change icon based on state
-                menuToggleBtn.innerHTML = mainNav.classList.contains('active') ? '✕' : '☰';
+                document.body.classList.toggle('overlay-active'); // For main body scroll lock
             });
 
-            // Close menu when a nav link is clicked (for single-page navigation)
             mainNav.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     if (mainNav.classList.contains('active')) {
-                         menuToggleBtn.setAttribute('aria-expanded', 'false');
-                         mainNav.classList.remove('active');
-                         document.body.classList.remove('overlay-active');
-                         menuToggleBtn.innerHTML = '☰';
+                         menuToggleBtn.click(); // Simulate click to close
                     }
                 });
             });
